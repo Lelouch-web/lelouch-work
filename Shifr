@@ -1,0 +1,23 @@
+#шифрация
+x = 'THEBEST'  #текст для шифра
+a = 'TRUE'  #ключ
+a *= len(x)//len(a) + 1
+e = ''
+ 
+for i, j in enumerate(x):
+ ww = (ord(j) + ord(a[i]))
+ e += chr(ww % 26 + 65)
+ print (e)
+
+
+#дешифрация
+y = ''  #текст для шифра
+a = 'TRUE'  #ключ
+a *= len(y)//len(a) + 1
+q = ''
+
+for i, j in enumerate(y):
+ ww = (ord(j) - ord(a[i]))
+ print(chr(ww % 26 + 65))
+ q += chr(ww % 26 + 65)
+ print(q)
